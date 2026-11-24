@@ -38,7 +38,7 @@ def delete(product_name):
 #method Put
 @app.route('/edit/<string:product_name>', methods = ['POST'])
 def edit(product_name):
-    products = db('products')
+    products = db['products']
     name = request.form['name']
     price = request.form['price']
     quantity = request.form['quantity']
